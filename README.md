@@ -1,2 +1,2 @@
-# good-dog-calc
+# good dog calculator
 apcsp create task
