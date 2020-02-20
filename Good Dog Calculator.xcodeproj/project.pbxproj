@@ -13,6 +13,7 @@
 		172792A223D2177F00CF09BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 172792A023D2177F00CF09BE /* Main.storyboard */; };
 		172792A423D2178100CF09BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 172792A323D2178100CF09BE /* Assets.xcassets */; };
 		172792A723D2178100CF09BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 172792A523D2178100CF09BE /* LaunchScreen.storyboard */; };
+		17EAEEE523FEEC75003900BF /* GoodDogCalc 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 17EAEEE423FEEC75003900BF /* GoodDogCalc 1.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		172792A623D2178100CF09BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		172792A823D2178100CF09BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		172792AE23D217B700CF09BE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		17EAEEE423FEEC75003900BF /* GoodDogCalc 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "GoodDogCalc 1.mlmodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 				172792AE23D217B700CF09BE /* README.md */,
 				1727929923D2177F00CF09BE /* Good Dog Calculator */,
 				1727929823D2177F00CF09BE /* Products */,
+				17EAEEE423FEEC75003900BF /* GoodDogCalc 1.mlmodel */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17EAEEE523FEEC75003900BF /* GoodDogCalc 1.mlmodel in Sources */,
 				1727929F23D2177F00CF09BE /* ViewController.swift in Sources */,
 				1727929B23D2177F00CF09BE /* AppDelegate.swift in Sources */,
 				1727929D23D2177F00CF09BE /* SceneDelegate.swift in Sources */,
