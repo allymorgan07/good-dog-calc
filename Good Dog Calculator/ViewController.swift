@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var dogView: UIImageView!
     @IBOutlet weak var outputText: UILabel!
+    @IBOutlet weak var confidenceText: UILabel!
 
     var model: GoodDogCalc_1!
     
@@ -23,7 +24,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         model = GoodDogCalc_1()
         dogView.image = image
-        classify()
+        confidenceText.text = nil
     }
     
     // begin cited code
@@ -37,13 +38,17 @@ class ViewController: UIViewController {
                 print("There are no results for this image")
                 return
             }
+            
             // Assigns the first result (if it exists) to firstObject
             guard let firstObject = results.first else {
                 print("There are no results for this image")
                 return
             }
+            
             let prediction = firstObject.identifier
-          self.updatePrediction(to: prediction)
+            let confidence = firstObject.confidence
+            
+            self.updatePrediction(to: prediction, confidence: confidence)
         }
         
         // Transform the UIImage into Data
@@ -59,8 +64,11 @@ class ViewController: UIViewController {
     }
     //end cited code
     
-    func updatePrediction(to prediction: String) {
-        outputText.text = "good \(prediction)!"
+    func updatePrediction(to prediction: String, confidence: Float) {
+        let cleanPrediction = prediction.replacingOccurrences(of: "_", with: " ").lowercased()
+        let cleanConfidence = Int(confidence * 100)
+        outputText.text = "good \(cleanPrediction)!"
+        confidenceText.text = "\(cleanConfidence)% confidence"
     }
     
     func openImageGallery() {
@@ -77,7 +85,6 @@ class ViewController: UIViewController {
     func newDog() {
         classify()
         dogView.image = image
-        print("hiiiii")
     }
 }
 
