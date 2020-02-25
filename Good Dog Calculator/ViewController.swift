@@ -14,9 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var dogView: UIImageView!
     @IBOutlet weak var outputText: UILabel!
     @IBOutlet weak var confidenceText: UILabel!
-
-    var model: GoodDogCalc_1!
     
+    var model: GoodDogCalc_1!
     var image: UIImage = UIImage(named: "puppy")!
     
     

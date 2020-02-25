@@ -46,7 +46,6 @@
 				172792AE23D217B700CF09BE /* README.md */,
 				1727929923D2177F00CF09BE /* Good Dog Calculator */,
 				1727929823D2177F00CF09BE /* Products */,
-				17EAEEE423FEEC75003900BF /* GoodDogCalc 1.mlmodel */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +60,7 @@
 		1727929923D2177F00CF09BE /* Good Dog Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				17EAEEE423FEEC75003900BF /* GoodDogCalc 1.mlmodel */,
 				1727929A23D2177F00CF09BE /* AppDelegate.swift */,
 				1727929C23D2177F00CF09BE /* SceneDelegate.swift */,
 				1727929E23D2177F00CF09BE /* ViewController.swift */,
