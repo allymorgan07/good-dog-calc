@@ -29,16 +29,12 @@ class ViewController: UIViewController {
     // begin cited code
     // https://medium.com/zipper-studios/how-to-add-a-machine-learning-model-to-your-ios-project-using-coreml-84d19f0ac524
     func classify() {
-        // Create the Vision request using the model previously instantiated
         let vnModel = try! VNCoreMLModel(for: model.model)
         let request = VNCoreMLRequest(model: vnModel) { (request, error) in
-            // Checks if the data is in the correct format and assigns it to results
             guard let results = request.results as? [VNClassificationObservation] else {
                 print("There are no results for this image")
                 return
             }
-            
-            // Assigns the first result (if it exists) to firstObject
             guard let firstObject = results.first else {
                 print("There are no results for this image")
                 return
@@ -50,11 +46,9 @@ class ViewController: UIViewController {
             self.updatePrediction(to: prediction, confidence: confidence)
         }
         
-        // Transform the UIImage into Data
         let imageData = image.jpegData(compressionQuality: 0.5)
         
           do {
-              // Perform the Vision request
               try VNImageRequestHandler(data: imageData!, options: [:]).perform([request])
           } catch {
               print("There are no results for this image")
